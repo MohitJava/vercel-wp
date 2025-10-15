@@ -62,6 +62,10 @@ class VercelWP_Preview_Manager {
         // Headless functionality hooks
         add_action('init', array($this, 'init_headless_functionality'));
         
+        // Admin bar URL fix - add hooks directly in constructor
+        add_action('admin_footer', array($this, 'fix_admin_bar_urls_js'), 999);
+        add_action('wp_footer', array($this, 'fix_admin_bar_urls_js'), 999);
+        
         // Note: activation/deactivation hooks are now in vercel-wp.php
     }
     
@@ -1212,28 +1216,33 @@ class VercelWP_Preview_Manager {
      * Initialize headless functionality
      */
     public function init_headless_functionality() {
-        // Debug: Check if function is called
-        // Debug logs removed
+        // Get current settings
+        $settings = get_option('vercel_wp_preview_settings', array());
+        
+        // Debug: Log initialization
+        error_log('Vercel WP: init_headless_functionality called');
+        error_log('Vercel WP: Settings: ' . print_r($settings, true));
         
         // Define URL constants
         $this->define_url_constants();
         
-        // Debug: Check current settings
-        $settings = get_option('vercel_wp_preview_settings');
-        // Debug logs removed
-        
-        // Change admin bar URLs
-        add_action('admin_bar_menu', array($this, 'change_visit_and_view_site_url'), 999);
+        // Admin bar URL modification is now handled directly in constructor
+        if (!empty($settings['production_url'])) {
+            error_log('Vercel WP: Production URL found: ' . $settings['production_url']);
+        } else {
+            error_log('Vercel WP: No production URL configured');
+        }
         
         // Handle theme page disabling
-        $settings = get_option('vercel_wp_preview_settings');
         if (isset($settings['disable_theme_page']) && $settings['disable_theme_page']) {
             add_action('admin_menu', array($this, 'remove_themes_menu_item'), 999);
             add_action('admin_init', array($this, 'redirect_themes_page'));
         }
         
-        // Redirect all public routes (high priority to override theme redirects)
-        add_action('template_redirect', array($this, 'redirect_all_public_routes'), 1);
+        // Redirect all public routes only if production URL is configured
+        if (!empty($settings['production_url'])) {
+            add_action('template_redirect', array($this, 'redirect_all_public_routes'), 1);
+        }
     }
     
     /**
@@ -1443,25 +1452,59 @@ class VercelWP_Preview_Manager {
     }
     
     /**
-     * Change "Visit Site" button URL in admin bar
+     * Fix admin bar URLs using JavaScript
      */
-    public function change_visit_and_view_site_url($wp_admin_bar) {
+    public function fix_admin_bar_urls_js() {
         $settings = get_option('vercel_wp_preview_settings', array());
         $production_url = !empty($settings['production_url']) ? rtrim($settings['production_url'], '/') : '';
         
-        // If no production URL is configured, use home URL
         if (empty($production_url)) {
-            $production_url = home_url();
+            return;
         }
-        
-        $wp_admin_bar->add_node([
-            'id' => 'site-name',
-            'href' => $production_url,
-        ]);
-        $wp_admin_bar->add_node([
-            'id' => 'view-site',
-            'href' => $production_url,
-        ]);
+        ?>
+        <script type="text/javascript">
+        (function() {
+            var productionUrl = '<?php echo esc_js($production_url); ?>';
+            
+            function fixAdminBarUrls() {
+                // Fix using pure JavaScript (no jQuery dependency)
+                var siteNameLink = document.querySelector('#wp-admin-bar-site-name > a');
+                var viewSiteLink = document.querySelector('#wp-admin-bar-view-site > a');
+                
+                if (siteNameLink) {
+                    siteNameLink.setAttribute('href', productionUrl);
+                    console.log('Vercel WP: Updated site-name link to:', productionUrl);
+                }
+                
+                if (viewSiteLink) {
+                    viewSiteLink.setAttribute('href', productionUrl);
+                    console.log('Vercel WP: Updated view-site link to:', productionUrl);
+                }
+                
+                // Also try with .ab-item class
+                var abItems = document.querySelectorAll('#wp-admin-bar-site-name .ab-item, #wp-admin-bar-view-site .ab-item');
+                abItems.forEach(function(item) {
+                    if (item.tagName === 'A') {
+                        item.setAttribute('href', productionUrl);
+                        console.log('Vercel WP: Updated ab-item link to:', productionUrl);
+                    }
+                });
+            }
+            
+            // Run on DOM ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', fixAdminBarUrls);
+            } else {
+                fixAdminBarUrls();
+            }
+            
+            // Also run after delays to catch late renders
+            setTimeout(fixAdminBarUrls, 100);
+            setTimeout(fixAdminBarUrls, 500);
+            setTimeout(fixAdminBarUrls, 1000);
+        })();
+        </script>
+        <?php
     }
     
     /**

@@ -53,6 +53,7 @@ The plugin enables **team collaboration** by allowing content creators to previe
 - Preview buttons in post editor and admin bar
 - URL mapping between WordPress and Vercel
 - **Automatic permalink rewriting** - All permalinks automatically use production URL
+- **Admin bar URL modification** - "Visit Site" button redirects to production URL
 - Headless WordPress functionality
 - URL replacement tool for migrations
 - Cache management

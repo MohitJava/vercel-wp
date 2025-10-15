@@ -58,6 +58,30 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.3] - 2024-10-15
+
+### Fixed
+
+- **Fixed admin bar "Visit Site" button URL** - Now correctly redirects to production URL instead of WordPress URL
+- Resolved issue where admin bar URLs were not being modified due to hooks being registered too late
+- Fixed JavaScript injection timing to ensure admin bar links are updated after render
+
+### Enhanced
+
+- Improved hook registration by moving admin bar fixes directly to constructor
+- Added JavaScript-based URL modification for better compatibility
+- Admin bar modification now works with all themes and configurations
+- Better debugging with console logs for URL updates
+
+### Technical Changes
+
+- Moved `admin_footer` and `wp_footer` hooks to class constructor for earlier registration
+- Simplified URL modification approach using client-side JavaScript
+- Removed complex filter-based approaches that were causing conflicts
+- Added multiple retry attempts (100ms, 500ms, 1000ms) to catch late-rendered elements
+
+---
+
 ## [1.0.2] - 2024-01-15
 
 ### Fixed
