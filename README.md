@@ -4,7 +4,6 @@
 
 **Important**: This is NOT an official Vercel plugin. This is a third-party plugin developed independently to provide WordPress-Vercel integration functionality.
 
-Version: 1.0.0  
 Author: Dorey Benjamin  
 License: GPLv3 or later
 
