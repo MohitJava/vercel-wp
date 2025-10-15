@@ -198,23 +198,6 @@ vercel-wp/
 
 ---
 
-## Changelog
-
-### 1.0.0 - Initial Release
-
-- Unified settings page with tabbed interface
-- All original functionality preserved
-- Deploy tab (default)
-- Preview tab with full features
-- **Automatic permalink rewriting** - All permalinks use production URL
-- **Smart permalink filters** - Works with posts, pages, custom post types
-- **Admin bar integration** - "Visit Site" links use production URL
-- **Public route redirection** - All public pages redirect to production
-- Clean code architecture
-- Comprehensive documentation
-
----
-
 ## Credits
 
 **Disclaimer**: This plugin is not affiliated with, endorsed by, or officially supported by Vercel Inc. Vercel is a trademark of Vercel Inc. This plugin uses Vercel's public APIs and webhook functionality as documented in their official documentation.

@@ -579,6 +579,12 @@ msgstr "Settings saved"
 msgid "Cache cleared"
 msgstr "Cache cleared"
 
+msgid "Cache cleared via Vercel API"
+msgstr "Cache cleared via Vercel API"
+
+msgid "Cache timestamp updated (Vercel API not configured)"
+msgstr "Cache timestamp updated (Vercel API not configured)"
+
 msgid "Preview URL missing"
 msgstr "Preview URL missing"
 

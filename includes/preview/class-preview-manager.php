@@ -188,7 +188,13 @@ class VercelWP_Preview_Manager {
     public function add_preview_buttons_after_title() {
         global $post;
         
-        if (!$post || !in_array($post->post_type, array('post', 'page'))) {
+        if (!$post || !$this->is_editable_post_type($post->post_type)) {
+            return;
+        }
+        
+        // Additional check: ensure this specific post has a permalink
+        $current_url = get_permalink($post->ID);
+        if (!$current_url || $current_url === get_site_url() . '/') {
             return;
         }
         
@@ -198,7 +204,6 @@ class VercelWP_Preview_Manager {
             return;
         }
         
-        $current_url = get_permalink($post->ID);
         $preview_url = $this->get_preview_url($current_url);
         
         echo '<div class="headless-preview-buttons-container" style="margin-top: 10px; margin-bottom: 15px; background: #fff; border: 1px solid #e1e1e1; border-radius: 4px; padding: 10px; width: 100%;">';
@@ -300,8 +305,36 @@ class VercelWP_Preview_Manager {
         echo '</div>';
     }
 
+    /**
+     * Check if a post type should show preview functionality
+     * Only shows for post types that have URLs/permaliens
+     */
     private function is_editable_post_type($post_type) {
-        return in_array($post_type, array('post', 'page'));
+        // Include all public post types (posts, pages, and custom post types)
+        $post_type_object = get_post_type_object($post_type);
+        
+        if (!$post_type_object) {
+            return false;
+        }
+        
+        // Include if it's public, has a public UI, and has permalinks/URLs
+        if (!$post_type_object->public || !$post_type_object->show_ui) {
+            return false;
+        }
+        
+        // Check if this post type has permalinks/URLs
+        // Skip if it's not publicly queryable (no frontend URLs)
+        if (!$post_type_object->publicly_queryable) {
+            return false;
+        }
+        
+        // Additional check: ensure the post type has rewrite rules
+        // This prevents showing preview for post types without URLs
+        if (empty($post_type_object->rewrite)) {
+            return false;
+        }
+        
+        return true;
     }
     
     public function add_preview_buttons_in_publish_box() {
@@ -311,12 +344,17 @@ class VercelWP_Preview_Manager {
             return;
         }
         
+        // Additional check: ensure this specific post has a permalink
+        $current_url = get_permalink($post->ID);
+        if (!$current_url || $current_url === get_site_url() . '/') {
+            return;
+        }
+        
         $settings = get_option('vercel_wp_preview_settings');
         if (!isset($settings['show_button_editor']) || !$settings['show_button_editor']) {
             return;
         }
         
-        $current_url = get_permalink($post->ID);
         $preview_url = $this->get_preview_url($current_url);
         
         // Native WordPress style for Publish section with misc-pub-section classes
@@ -507,9 +545,21 @@ class VercelWP_Preview_Manager {
         check_ajax_referer('vercel_wp_preview_nonce', 'nonce');
         
         $url = sanitize_url($_POST['url']);
+        
+        // Get Vercel API credentials to determine method used
+        $api_key = get_option('vercel_api_key');
+        $project_id = get_option('vercel_site_id');
+        
         $this->clear_cache_for_url($url);
         
-        wp_send_json_success(array('message' => __('Cache cleared', 'vercel-wp')));
+        // Determine which method was used for user feedback
+        if ($api_key && $project_id) {
+            $message = __('Cache cleared via Vercel API', 'vercel-wp');
+        } else {
+            $message = __('Cache timestamp updated (Vercel API not configured)', 'vercel-wp');
+        }
+        
+        wp_send_json_success(array('message' => $message));
     }
     
     private function get_current_page_url() {
@@ -1066,11 +1116,61 @@ class VercelWP_Preview_Manager {
     
     
     private function clear_cache_for_url($url) {
-        // Here we could implement logic to clear Vercel cache
-        // For now, we just use a timestamp to force refresh
+        // Get Vercel API credentials
+        $api_key = get_option('vercel_api_key');
+        $project_id = get_option('vercel_site_id');
+        
+        if (!$api_key || !$project_id) {
+            // Fallback to timestamp method if API credentials not configured
+            $settings = get_option('vercel_wp_preview_settings');
+            $settings['last_cache_clear'] = time();
+            update_option('vercel_wp_preview_settings', $settings);
+            return;
+        }
+        
+        // Try to clear Vercel cache directly via API
+        $this->purge_vercel_cache_direct($api_key, $project_id);
+        
+        // Also update timestamp as fallback
         $settings = get_option('vercel_wp_preview_settings');
         $settings['last_cache_clear'] = time();
         update_option('vercel_wp_preview_settings', $settings);
+    }
+    
+    /**
+     * Try to purge Vercel cache directly via API
+     */
+    private function purge_vercel_cache_direct($api_key, $project_id) {
+        // Try different possible endpoints for cache purging
+        $endpoints = array(
+            "https://api.vercel.com/v1/integrations/deploy/{$project_id}/clear-cache",
+            "https://api.vercel.com/v1/projects/{$project_id}/cache/purge",
+            "https://api.vercel.com/v1/edge-cache/purge"
+        );
+        
+        foreach ($endpoints as $endpoint) {
+            $response = wp_remote_post($endpoint, array(
+                'timeout' => 30,
+                'headers' => array(
+                    'Authorization' => 'Bearer ' . $api_key,
+                    'Content-Type' => 'application/json',
+                    'User-Agent' => 'WordPress-Vercel-WP/' . VERCEL_WP_VERSION
+                ),
+                'body' => json_encode(array(
+                    'paths' => ['/*'],
+                    'projectId' => $project_id
+                ))
+            ));
+            
+            if (!is_wp_error($response)) {
+                $status_code = wp_remote_retrieve_response_code($response);
+                if ($status_code >= 200 && $status_code < 300) {
+                    return true;
+                }
+            }
+        }
+        
+        return false;
     }
     
     /**

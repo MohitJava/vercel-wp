@@ -111,7 +111,7 @@ jQuery(document).ready(function ($) {
       url: headlessPreview.ajaxUrl,
       type: "POST",
       data: {
-        action: "headless_preview_clear_cache",
+        action: "vercel_wp_preview_clear_cache",
         nonce: headlessPreview.nonce,
         url: url,
       },
