@@ -310,6 +310,11 @@ class VercelWP_Preview_Manager {
      * Only shows for post types that have URLs/permaliens
      */
     private function is_editable_post_type($post_type) {
+        // Always include posts and pages (WordPress defaults)
+        if (in_array($post_type, array('post', 'page'))) {
+            return true;
+        }
+        
         // Include all public post types (posts, pages, and custom post types)
         $post_type_object = get_post_type_object($post_type);
         
@@ -328,8 +333,8 @@ class VercelWP_Preview_Manager {
             return false;
         }
         
-        // Additional check: ensure the post type has rewrite rules
-        // This prevents showing preview for post types without URLs
+        // For custom post types, ensure they have rewrite rules
+        // Posts and pages are handled above, so this only applies to custom post types
         if (empty($post_type_object->rewrite)) {
             return false;
         }

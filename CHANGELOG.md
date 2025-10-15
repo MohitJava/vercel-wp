@@ -58,6 +58,21 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.2] - 2024-01-15
+
+### Fixed
+
+- Fixed preview functionality not working on posts and pages
+- Corrected post type validation logic to always include WordPress default post types
+
+### Enhanced
+
+- Improved post type filtering logic for better compatibility
+- Posts and pages now always show preview functionality
+- Custom post types still filtered based on URL availability
+
+---
+
 ## [1.0.1] - 2024-01-15
 
 ### Fixed
