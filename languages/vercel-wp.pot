@@ -1,0 +1,426 @@
+# Vercel WP - Template de traduction
+# Copyright (C) 2024 Dorey Benjamin
+# Ce fichier est distribué sous licence GPL v3 ou ultérieure.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Vercel WP 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/doreybenjamin/vercel-wp/issues\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: Dorey Benjamin <benjamin@biomx.dev>\n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# Deploy Module Translations
+msgid "Deploy to Vercel"
+msgstr ""
+
+msgid "Vercel WP"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Webhook Settings"
+msgstr ""
+
+msgid "The build and deploy status will not work without these fields entered correctly"
+msgstr ""
+
+msgid "Webhook Build URL"
+msgstr ""
+
+msgid "Vercel Project ID"
+msgstr ""
+
+msgid "Vercel API Key"
+msgstr ""
+
+msgid "Build Website"
+msgstr ""
+
+msgid "Build Site"
+msgstr ""
+
+msgid "Do not abuse the Build Site button"
+msgstr ""
+
+msgid "Deploy Status"
+msgstr ""
+
+msgid "Check Deploy Status"
+msgstr ""
+
+msgid "Previous Builds"
+msgstr ""
+
+msgid "Load Previous Deploys"
+msgstr ""
+
+msgid "Do not change this if you dont know what you are doing."
+msgstr ""
+
+msgid "Creating a Deploy Hook"
+msgstr ""
+
+msgid "Your settings have been updated!"
+msgstr ""
+
+msgid "Deploy Site"
+msgstr ""
+
+msgid "Vercel deploy status"
+msgstr ""
+
+msgid "Configuration Guide"
+msgstr ""
+
+msgid "Follow these steps to get the required information from Vercel:"
+msgstr ""
+
+msgid "1. Webhook Build URL"
+msgstr ""
+
+msgid "Go to your Vercel project dashboard"
+msgstr ""
+
+msgid "Navigate to Settings → Git"
+msgstr ""
+
+msgid "Scroll down to \"Deploy Hooks\" section"
+msgstr ""
+
+msgid "Click \"Create Hook\" and give it a name"
+msgstr ""
+
+msgid "Copy the generated webhook URL"
+msgstr ""
+
+msgid "→ Detailed Deploy Hook Documentation"
+msgstr ""
+
+msgid "2. Vercel Project ID"
+msgstr ""
+
+msgid "Navigate to Settings → General"
+msgstr ""
+
+msgid "Find \"Project ID\" in the Project Information section"
+msgstr ""
+
+msgid "Copy the Project ID"
+msgstr ""
+
+msgid "3. Vercel API Key"
+msgstr ""
+
+msgid "Go to Vercel Account Settings"
+msgstr ""
+
+msgid "Navigate to Tokens section"
+msgstr ""
+
+msgid "Click \"Create Token\" and give it a name"
+msgstr ""
+
+msgid "Set expiration date (recommended: 1 year)"
+msgstr ""
+
+msgid "Copy the generated token"
+msgstr ""
+
+msgid "→ API Key Documentation"
+msgstr ""
+
+msgid "Important:"
+msgstr ""
+
+msgid "If your project is in a Team, make sure to set your team as the Default Team in Account Settings."
+msgstr ""
+
+msgid "Vercel Deploy"
+msgstr ""
+
+msgid "Deploy your WordPress site to Vercel with one click"
+msgstr ""
+
+msgid "Configuration Required"
+msgstr ""
+
+msgid "Please configure your Vercel settings before deploying."
+msgstr ""
+
+msgid "Go to Settings"
+msgstr ""
+
+msgid "Deploy Now"
+msgstr ""
+
+msgid "Trigger a new deployment"
+msgstr ""
+
+msgid "This will trigger a new build and deployment of your site."
+msgstr ""
+
+msgid "Deployment Status"
+msgstr ""
+
+msgid "Check current deployment status"
+msgstr ""
+
+msgid "Check Status"
+msgstr ""
+
+msgid "No active deployment found"
+msgstr ""
+
+msgid "Deployment History"
+msgstr ""
+
+msgid "View previous deployments"
+msgstr ""
+
+msgid "Load History"
+msgstr ""
+
+msgid "Quick Actions"
+msgstr ""
+
+msgid "Vercel Dashboard"
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "Vercel Status"
+msgstr ""
+
+msgid "Checking status..."
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "System Info"
+msgstr ""
+
+msgid "Plugin Version:"
+msgstr ""
+
+msgid "WordPress:"
+msgstr ""
+
+msgid "PHP:"
+msgstr ""
+
+msgid "Configuration:"
+msgstr ""
+
+msgid "Complete"
+msgstr ""
+
+msgid "Incomplete"
+msgstr ""
+
+msgid "Recent Activity"
+msgstr ""
+
+msgid "No recent activity"
+msgstr ""
+
+msgid "Branch:"
+msgstr ""
+
+msgid "Deployed by:"
+msgstr ""
+
+msgid "Commit:"
+msgstr ""
+
+msgid "Environment:"
+msgstr ""
+
+msgid "Please configure the following required settings before deploying:"
+msgstr ""
+
+msgid "Please configure all required settings before deploying. Missing: %s"
+msgstr ""
+
+msgid "Webhook URL not configured. Please set up your webhook URL in the settings."
+msgstr ""
+
+msgid "Deployment Not Available"
+msgstr ""
+
+msgid "Webhook URL is required to deploy your site. Please configure it in the settings."
+msgstr ""
+
+msgid "Configure Webhook URL"
+msgstr ""
+
+msgid "Additional Configuration Available"
+msgstr ""
+
+msgid "You can deploy now, but for full functionality, configure these additional settings:"
+msgstr ""
+
+msgid "Configure Additional Settings"
+msgstr ""
+
+msgid "Checking Vercel status..."
+msgstr ""
+
+msgid "Vercel"
+msgstr ""
+
+msgid "Deploying…"
+msgstr ""
+
+msgid "Deploy building..."
+msgstr ""
+
+msgid "Deployment completed successfully!"
+msgstr ""
+
+msgid "Deployment failed"
+msgstr ""
+
+msgid "Load Last 3 Deployments"
+msgstr ""
+
+msgid "Recent deployments"
+msgstr ""
+
+msgid "Vercel Status - Click to view"
+msgstr ""
+
+msgid "Deploy Settings"
+msgstr ""
+
+msgid "Configure your Vercel deployment settings."
+msgstr ""
+
+msgid "Quick Links"
+msgstr ""
+
+msgid "📊 Vercel Dashboard"
+msgstr ""
+
+msgid "📚 Vercel Docs"
+msgstr ""
+
+msgid "📖 Deploy Hook Docs"
+msgstr ""
+
+msgid "📖 API Key Docs"
+msgstr ""
+
+msgid "💡 Important:"
+msgstr ""
+
+# Preview Module Translations
+msgid "Headless Preview"
+msgstr ""
+
+msgid "Loading..."
+msgstr ""
+
+msgid "Error loading"
+msgstr ""
+
+msgid "Clear cache"
+msgstr ""
+
+msgid "Open preview"
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "New tab"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Tablet"
+msgstr ""
+
+msgid "Mobile"
+msgstr ""
+
+msgid "Connected"
+msgstr ""
+
+msgid "Preview blocked"
+msgstr ""
+
+msgid "Your browser blocks the display. Click below to open in a new tab."
+msgstr ""
+
+msgid "Open in new tab"
+msgstr ""
+
+msgid "Unable to load preview"
+msgstr ""
+
+msgid "Preview cannot be loaded. Check your configuration."
+msgstr ""
+
+msgid "Retry"
+msgstr ""
+
+msgid "Security error"
+msgstr ""
+
+msgid "Settings saved"
+msgstr ""
+
+msgid "Cache cleared"
+msgstr ""
+
+msgid "Preview URL missing"
+msgstr ""
+
+msgid "Too many redirects detected. "
+msgstr ""
+
+msgid "Connection timeout. URL takes too long to respond."
+msgstr ""
+
+msgid "SSL error. Check that the URL uses HTTPS correctly."
+msgstr ""
+
+msgid "Connection error: %s"
+msgstr ""
+
+msgid "Connection successful! (HTTP Code: %d)"
+msgstr ""
+
+msgid " - Redirected to: %s"
+msgstr ""
+
+msgid "HTTP error %d. Check that the URL is accessible."
+msgstr ""
+
+msgid "Redirect chain detected: %s"
+msgstr ""
+
+msgid "Check that the URL is correct and accessible."
+msgstr ""
+
+msgid "URL not configured"
+msgstr ""
+
+msgid "Connection active"
+msgstr ""
+
+msgid "Connection inactive"
+msgstr ""

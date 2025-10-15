@@ -1,0 +1,1368 @@
+/**
+ * Vercel Deploy Plugin Styles - WordPress Classic Design
+ * 
+ * @package VercelDeploy
+ * @since 1.1.0
+ */
+
+/* Main page layout */
+.vercel-deploy-page {
+  max-width: 1400px;
+}
+
+.vercel-deploy-page .description {
+  color: #646970;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Layout with sidebar */
+.vercel-layout {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.vercel-main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.vercel-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* Grid layout */
+.vercel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Cards */
+.vercel-card {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.vercel-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2327;
+}
+
+.vercel-card p {
+  margin: 0 0 15px 0;
+  color: #646970;
+  font-size: 14px;
+}
+
+.vercel-card .description {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #646970;
+}
+
+/* Buttons */
+.vercel-card .button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.vercel-card .button-large {
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Status display */
+.vercel-status-message {
+  margin: 15px 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.vercel-status-message.success {
+  background: #d1edff;
+  color: #004085;
+  border: 1px solid #b3d9ff;
+}
+
+.vercel-status-message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.vercel-status-display {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f6f7f7;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+}
+
+.vercel-status-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.vercel-status-icon-container {
+  flex-shrink: 0;
+}
+
+.vercel-status-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.vercel-status-details {
+  flex: 1;
+}
+
+.vercel-status-item {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.vercel-status-item:last-child {
+  margin-bottom: 0;
+}
+
+.vercel-status-item strong {
+  color: #1d2327;
+  font-weight: 600;
+}
+
+/* No status message */
+.vercel-no-status {
+  margin-top: 15px;
+  padding: 15px;
+  text-align: center;
+  color: #646970;
+  background: #f6f7f7;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+}
+
+.vercel-no-status p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Deployments container */
+.vercel-deployments-container {
+  margin-top: 15px;
+}
+
+.vercel-deployment-item {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s ease;
+}
+
+.vercel-deployment-item:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.vercel-deployment-item:last-child {
+  margin-bottom: 0;
+}
+
+.vercel-deployment-info {
+  width: 100%;
+}
+
+.vercel-deployment-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2327;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vercel-deployment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 12px;
+  color: #646970;
+}
+
+.vercel-deployment-meta span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.vercel-deployment-meta strong {
+  color: #1d2327;
+  font-weight: 600;
+}
+
+/* Status badges */
+.vercel-status-ready {
+  color: #00a32a;
+  font-weight: 600;
+}
+
+.vercel-status-building {
+  color: #dba617;
+  font-weight: 600;
+}
+
+.vercel-status-error {
+  color: #d63638;
+  font-weight: 600;
+}
+
+.vercel-status-canceled {
+  color: #646970;
+  font-weight: 600;
+}
+
+/* Quick actions */
+.vercel-quick-actions {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.vercel-quick-actions h2 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2327;
+}
+
+.vercel-actions-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.vercel-actions-grid .button {
+  margin: 0;
+}
+
+/* No deployments message */
+.vercel-no-deployments {
+  text-align: center;
+  padding: 20px;
+  color: #646970;
+  background: #f6f7f7;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+}
+
+.vercel-no-deployments p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Loading states */
+.button.loading {
+  background: #0073aa !important;
+  color: #ffffff !important;
+  opacity: 0.8;
+  cursor: not-allowed;
+  position: relative;
+  border: 1px solid #005a87 !important;
+}
+
+.button.loading:hover {
+  background: #0073aa !important;
+  color: #ffffff !important;
+  border-color: #005a87 !important;
+}
+
+.button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: vercel-spin 1s linear infinite;
+}
+
+@keyframes vercel-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for new deployments */
+@keyframes vercel-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vercel-deployment-item.new {
+  animation: vercel-slide-in 0.3s ease-out;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .vercel-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .vercel-status-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vercel-deployment-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vercel-deployment-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .vercel-actions-grid {
+    flex-direction: column;
+  }
+
+  /* Mobile-specific improvements */
+  .vercel-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .vercel-card h2 {
+    font-size: 16px;
+  }
+
+  .vercel-card p {
+    font-size: 13px;
+  }
+
+  .button-large {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .vercel-status-display {
+    padding: 12px;
+  }
+
+  .vercel-status-item {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  /* Admin bar mobile improvements */
+  #wp-admin-bar-vercel-deploy-button .ab-item {
+    padding: 8px 12px;
+  }
+
+  #wp-admin-bar-vercel-deploy-button .ab-label {
+    font-size: 13px;
+  }
+
+  /* Mobile touch improvements */
+  .vercel-card .button,
+  .vercel-actions-grid .button {
+    min-height: 44px; /* iOS touch target size */
+    padding: 12px 16px;
+  }
+
+  /* Mobile-friendly form elements */
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+  }
+
+  /* Mobile layout adjustments */
+  .vercel-layout {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .vercel-sidebar {
+    width: 100%;
+    order: -1; /* Move sidebar above main content on mobile */
+  }
+
+  .vercel-widget {
+    margin-bottom: 15px;
+  }
+
+  .vercel-widget h3 {
+    font-size: 15px;
+  }
+
+  /* Mobile status indicators */
+  .vercel-status-item .status-indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Mobile deployment history */
+  .vercel-deployment-meta span {
+    font-size: 11px;
+    margin-bottom: 3px;
+  }
+
+  /* Mobile admin bar adjustments */
+  #wp-admin-bar-vercel-status-indicator {
+    padding: 4px 8px;
+  }
+
+  #vercel-status-dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* WordPress admin bar integration */
+#wp-admin-bar-vercel-deploy-button .ab-item {
+  transition: opacity 0.2s ease;
+}
+
+#wp-admin-bar-vercel-deploy-button.running .ab-item {
+  opacity: 0.5;
+}
+
+#wp-admin-bar-vercel-deploy-button.deploying .ab-item {
+  opacity: 0.7;
+}
+
+/* Force opacity to 1 when deployment is complete */
+#wp-admin-bar-vercel-deploy-button:not(.running):not(.deploying) .ab-item {
+  opacity: 1 !important;
+}
+
+/* Admin menu styles */
+#adminmenu .toplevel_page_deploy_webhook_fields .wp-menu-image img {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+#adminmenu .toplevel_page_deploy_webhook_fields .wp-menu-image {
+  padding: 8px 0 0 0;
+}
+
+#adminmenu .toplevel_page_deploy_webhook_fields .wp-menu-name {
+  font-weight: 600;
+}
+
+/* Accessibility improvements */
+.button:focus,
+.vercel-card a:focus {
+  outline: 2px solid #0073aa;
+  outline-offset: 2px;
+}
+
+/* Sidebar widgets */
+.vercel-widget {
+  background: #fff;
+  border: 1px solid #c3c4c7;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.vercel-widget h3 {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d2327;
+  border-bottom: 1px solid #f0f0f1;
+  padding-bottom: 8px;
+}
+
+/* Vercel Status Widget */
+.vercel-status-widget {
+  margin-bottom: 10px;
+}
+
+.vercel-status-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #646970;
+  font-size: 13px;
+}
+
+.vercel-status-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f1;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.vercel-status-item:last-child {
+  border-bottom: none;
+}
+
+.vercel-status-item .status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.vercel-status-item .status-indicator.operational {
+  background: #00a32a;
+}
+
+.vercel-status-item .status-indicator.degraded {
+  background: #dba617;
+}
+
+.vercel-status-item .status-indicator.outage {
+  background: #d63638;
+}
+
+.vercel-status-item .status-indicator.unknown {
+  background: #646970;
+}
+
+.vercel-status-refresh {
+  margin: 0;
+  font-size: 12px;
+  color: #646970;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.vercel-last-updated {
+  font-style: italic;
+}
+
+/* Recent Activity Widget */
+.vercel-recent-activity {
+  font-size: 13px;
+}
+
+.vercel-activity-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f1;
+}
+
+.vercel-activity-item:last-child {
+  border-bottom: none;
+}
+
+.vercel-activity-icon {
+  width: auto;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.vercel-activity-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.vercel-activity-text {
+  margin: 0 0 2px 0;
+  color: #1d2327;
+  line-height: 1.4;
+}
+
+.vercel-activity-time {
+  font-size: 11px;
+  color: #646970;
+}
+
+.vercel-no-activity {
+  text-align: center;
+  color: #646970;
+  font-style: italic;
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .vercel-layout {
+    flex-direction: column;
+  }
+
+  .vercel-sidebar {
+    width: 100%;
+  }
+
+  .vercel-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Status messages */
+.vercel-success {
+  color: #00a32a;
+  font-weight: 600;
+}
+
+.vercel-error {
+  color: #d63638;
+  font-weight: 600;
+}
+
+.vercel-warning {
+  color: #dba617;
+  font-weight: 600;
+}
+
+/* Button states */
+#build_button {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Loading/Disabled state */
+#build_button:disabled,
+#build_button.loading {
+  background: linear-gradient(135deg, #f0f0f1 0%, #e8e8e9 100%) !important;
+  border-color: #dcdcde !important;
+  color: #8c8f94 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  transform: none !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  position: relative;
+}
+
+#build_button:disabled:hover,
+#build_button.loading:hover {
+  background: linear-gradient(135deg, #f0f0f1 0%, #e8e8e9 100%) !important;
+  border-color: #dcdcde !important;
+  color: #8c8f94 !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  transform: none !important;
+}
+
+/* Loading state with subtle pulse effect */
+#build_button.loading::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Hide any spinner elements */
+#build_button .spinner {
+  display: none !important;
+}
+
+/* Active/Enabled state */
+#build_button:not(:disabled):not(.loading) {
+  background: linear-gradient(135deg, #2271b1 0%, #1e5a96 100%);
+  border-color: #2271b1;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(34, 113, 177, 0.2);
+}
+
+/* Button hover effects (only when not disabled) */
+#build_button:not(:disabled):not(.loading):hover {
+  background: linear-gradient(135deg, #135e96 0%, #0f4a7a 100%);
+  border-color: #135e96;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(34, 113, 177, 0.3);
+}
+
+#build_button:not(:disabled):not(.loading):active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(34, 113, 177, 0.3);
+}
+
+/* Focus state */
+#build_button:focus {
+  outline: 2px solid #2271b1;
+  outline-offset: 2px;
+}
+
+/* Disabled focus state */
+#build_button:disabled:focus,
+#build_button.loading:focus {
+  outline: 2px solid #dcdcde;
+  outline-offset: 2px;
+}
+
+/* Quick Actions in sidebar */
+.vercel-sidebar .vercel-actions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vercel-sidebar .vercel-actions-grid .button {
+  width: 100%;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+/* Tooltip styles */
+.vercel-tooltip {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  line-height: 1.4;
+}
+
+.vercel-history-tooltip h4 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2327;
+  border-bottom: 1px solid #f0f0f1;
+  padding-bottom: 5px;
+}
+
+.vercel-history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f1;
+}
+
+.vercel-history-item:last-child {
+  border-bottom: none;
+}
+
+.vercel-history-status {
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 3px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.vercel-history-status.ready {
+  background: #d1edff;
+  color: #004085;
+}
+
+.vercel-history-status.building {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.vercel-history-status.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.vercel-history-status.canceled {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.vercel-history-time {
+  font-size: 11px;
+  color: #646970;
+  font-style: italic;
+}
+
+.vercel-history-commit {
+  font-size: 11px;
+  color: #1d2327;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+/* Status Hover Tooltip - Inspired by the provided image */
+.vercel-status-hover {
+  animation: vercel-fade-in 0.2s ease-out;
+}
+
+@keyframes vercel-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vercel-hover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #404040;
+  background: #2c2c2c;
+}
+
+.vercel-hover-tabs {
+  display: flex;
+  gap: 0;
+}
+
+.vercel-hover-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vercel-hover-tab.active {
+  color: #0073aa;
+  border-bottom-color: #0073aa;
+}
+
+.vercel-hover-tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.vercel-hover-icon {
+  font-size: 12px;
+}
+
+.vercel-hover-reload {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #404040;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vercel-hover-reload:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #0073aa;
+}
+
+.vercel-hover-content {
+  padding: 16px;
+}
+
+.vercel-hover-content h4 {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.vercel-hover-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.vercel-hover-timeline-line {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #404040;
+}
+
+.vercel-hover-event {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.vercel-hover-event:last-child {
+  margin-bottom: 0;
+}
+
+.vercel-hover-event-dot {
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #0073aa;
+  border: 2px solid #2c2c2c;
+}
+
+.vercel-hover-event-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vercel-hover-event-user {
+  font-size: 12px;
+  color: #cccccc;
+  font-weight: 500;
+}
+
+.vercel-hover-event-action {
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+.vercel-hover-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #404040;
+  background: #2c2c2c;
+}
+
+.vercel-hover-footer a {
+  color: #0073aa;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.vercel-hover-footer a:hover {
+  color: #005a87;
+  text-decoration: underline;
+}
+
+/* Admin bar status indicator hover effect */
+#wp-admin-bar-vercel-status-indicator {
+  transition: all 0.2s ease;
+}
+
+#wp-admin-bar-vercel-status-indicator:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+#vercel-status-dot {
+  transition: all 0.3s ease;
+}
+
+#wp-admin-bar-vercel-status-indicator:hover #vercel-status-dot {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px rgba(0, 115, 170, 0.5);
+}
+
+/* Toast Notifications */
+.vercel-toast {
+  position: fixed;
+  top: 32px;
+  right: 20px;
+  min-width: 300px;
+  max-width: 400px;
+  z-index: 999999;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow: hidden;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vercel-toast-content {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 12px;
+}
+
+.vercel-toast-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vercel-toast-icon .dashicons {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.vercel-toast-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.vercel-toast-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vercel-toast-message {
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.vercel-toast-close {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.vercel-toast-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.vercel-toast-close .dashicons {
+  font-size: 14px;
+  width: 14px;
+  height: 14px;
+}
+
+/* Toast variants */
+.vercel-toast-success {
+  background: #ffffff;
+  border-left: 4px solid #00a32a;
+}
+
+.vercel-toast-success .vercel-toast-icon .dashicons {
+  color: #00a32a;
+}
+
+.vercel-toast-success .vercel-toast-title {
+  color: #00a32a;
+}
+
+.vercel-toast-error {
+  background: #ffffff;
+  border-left: 4px solid #d63638;
+}
+
+.vercel-toast-error .vercel-toast-icon .dashicons {
+  color: #d63638;
+}
+
+.vercel-toast-error .vercel-toast-title {
+  color: #d63638;
+}
+
+.vercel-toast-warning {
+  background: #ffffff;
+  border-left: 4px solid #dba617;
+}
+
+.vercel-toast-warning .vercel-toast-icon .dashicons {
+  color: #dba617;
+}
+
+.vercel-toast-warning .vercel-toast-title {
+  color: #dba617;
+}
+
+.vercel-toast-info {
+  background: #ffffff;
+  border-left: 4px solid #0073aa;
+}
+
+.vercel-toast-info .vercel-toast-icon .dashicons {
+  color: #0073aa;
+}
+
+.vercel-toast-info .vercel-toast-title {
+  color: #0073aa;
+}
+
+/* Mobile responsiveness for toasts */
+@media (max-width: 768px) {
+  .vercel-toast {
+    top: 20px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+
+  .vercel-toast-content {
+    padding: 12px;
+  }
+
+  .vercel-toast-title {
+    font-size: 12px;
+  }
+
+  .vercel-toast-message {
+    font-size: 13px;
+  }
+}
+
+/* Progress Indicators */
+.vercel-progress-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.vercel-progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.vercel-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00a32a, #00d084);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+  animation: vercel-progress-shimmer 2s infinite;
+}
+
+.vercel-progress-text {
+  font-size: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+}
+
+@keyframes vercel-progress-shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+/* Progress Modal */
+.vercel-progress-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.vercel-progress-modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.vercel-progress-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid #f0f0f1;
+}
+
+.vercel-progress-modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2327;
+}
+
+.vercel-progress-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.vercel-progress-modal-close:hover {
+  background-color: #f0f0f1;
+}
+
+.vercel-progress-modal-close .dashicons {
+  font-size: 16px;
+  color: #646970;
+}
+
+.vercel-progress-modal-body {
+  padding: 24px;
+}
+
+.vercel-progress-indicator-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.vercel-progress-bar-large {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vercel-progress-fill-large {
+  height: 100%;
+  background: linear-gradient(90deg, #00a32a, #00d084);
+  border-radius: 4px;
+  width: 0%;
+  transition: width 0.5s ease;
+  animation: vercel-progress-shimmer 2s infinite;
+}
+
+.vercel-progress-text-large {
+  font-size: 16px;
+  color: #1d2327;
+  font-weight: 500;
+  text-align: center;
+}
+
+.vercel-progress-percentage {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00a32a;
+  text-align: center;
+}
+
+/* Progress modal status variants */
+.vercel-progress-success .vercel-progress-fill-large {
+  background: linear-gradient(90deg, #00a32a, #00d084);
+}
+
+.vercel-progress-success .vercel-progress-percentage {
+  color: #00a32a;
+}
+
+.vercel-progress-error .vercel-progress-fill-large {
+  background: linear-gradient(90deg, #d63638, #f86368);
+}
+
+.vercel-progress-error .vercel-progress-percentage {
+  color: #d63638;
+}
+
+.vercel-progress-warning .vercel-progress-fill-large {
+  background: linear-gradient(90deg, #dba617, #f0c674);
+}
+
+.vercel-progress-warning .vercel-progress-percentage {
+  color: #dba617;
+}
+
+/* Mobile responsiveness for progress modal */
+@media (max-width: 768px) {
+  .vercel-progress-modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+
+  .vercel-progress-modal-header {
+    padding: 16px 20px 12px;
+  }
+
+  .vercel-progress-modal-header h3 {
+    font-size: 16px;
+  }
+
+  .vercel-progress-modal-body {
+    padding: 20px;
+  }
+
+  .vercel-progress-text-large {
+    font-size: 14px;
+  }
+
+  .vercel-progress-percentage {
+    font-size: 20px;
+  }
+}

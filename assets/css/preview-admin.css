@@ -1,0 +1,473 @@
+/* Sanity CMS Design - Split Screen Editor/Preview */
+
+/* Main container Sanity style */
+.headless-preview-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 9999999; /* Very high z-index to be above all WordPress */
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Sanity header */
+.headless-preview-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e1e5e9;
+  padding: 0 16px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  z-index: 10000000; /* Very high z-index for header */
+}
+
+.headless-preview-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headless-preview-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.headless-preview-tabs {
+  display: flex;
+  gap: 0;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.headless-preview-tab {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headless-preview-tab.active {
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.headless-preview-tab:hover:not(.active) {
+  color: #374151;
+}
+
+.headless-preview-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headless-preview-url-bar {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 300px;
+}
+
+.headless-preview-url-bar input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+  flex: 1;
+}
+
+.headless-preview-url-bar .button {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  padding: 4px;
+  margin: 0 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.headless-preview-url-bar .button:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.headless-preview-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.headless-preview-controls .button {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.headless-preview-controls .button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.headless-preview-controls .button.primary {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #ffffff;
+}
+
+.headless-preview-controls .button.primary:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* Split screen layout */
+.headless-preview-split {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Editor panel removed */
+
+/* Panel Preview (pleine largeur) */
+.headless-preview-preview {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.headless-preview-preview-header {
+  background: #f9fafb;
+  border-bottom: 1px solid #e1e5e9;
+  padding: 12px 16px;
+}
+
+.headless-preview-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headless-preview-preview-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin: 0;
+}
+
+.headless-preview-status-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headless-preview-preview-content {
+  flex: 1;
+  position: relative;
+  background: #f9fafb;
+}
+
+.headless-preview-preview-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+}
+
+/* Resizer removed */
+
+/* Fallback */
+.headless-preview-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fef2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000001; /* Very high z-index for error message */
+}
+
+.headless-preview-fallback-content {
+  text-align: center;
+  padding: 32px;
+  max-width: 400px;
+}
+
+.headless-preview-fallback-content h4 {
+  color: #dc2626;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.headless-preview-fallback-content h4::before {
+  content: "⚠️";
+  font-size: 20px;
+}
+
+.headless-preview-fallback-content p {
+  color: #7f1d1d;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 24px 0;
+  white-space: pre-line; /* Allow line breaks */
+}
+
+.headless-preview-fallback-content .button {
+  background: #dc2626;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headless-preview-fallback-content .button:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* Status indicator - More rounded and better positioned */
+.headless-preview-status {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.headless-preview-status.loading {
+  background: #f59e0b;
+  animation: pulse-status 1.5s ease-in-out infinite;
+}
+
+.headless-preview-status.error {
+  background: #ef4444;
+  width: 16px;
+  height: 16px;
+}
+
+/* Status message - À droite du statut */
+.headless-preview-status-message {
+  font-size: 12px;
+  color: #6b7280;
+  display: inline-block;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headless-preview-status-message.loading {
+  color: #f59e0b;
+}
+
+.headless-preview-status-message.error {
+  color: #ef4444;
+}
+
+.headless-preview-status-message.success {
+  color: #10b981;
+}
+
+@keyframes pulse-status {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Footer */
+.headless-preview-footer {
+  background: #ffffff;
+  border-top: 1px solid #e1e5e9;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.headless-preview-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.headless-preview-footer-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Preview meta-box - Fixed position and repositioning */
+#headless-preview-actions {
+  margin-top: 0;
+  position: sticky;
+  top: 20px;
+  z-index: 100;
+  order: 1; /* Force order after #submitdiv */
+}
+
+/* Reposition preview meta-box after Publish box */
+#submitdiv {
+  order: 0;
+}
+
+#headless-preview-actions {
+  order: 1;
+}
+
+/* S'assurer que la meta-box est visible */
+#headless-preview-actions .postbox {
+  margin-bottom: 20px;
+}
+
+#headless-preview-actions .postbox-header h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2327;
+  margin: 0;
+  padding: 12px 16px;
+  border-bottom: 1px solid #c3c4c7;
+}
+
+#headless-preview-actions .inside {
+  margin: 0;
+  padding: 16px;
+}
+
+/* Preview buttons - Improved style */
+.headless-preview-meta-box {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.headless-preview-buttons {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.headless-preview-meta-box .button {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.headless-preview-meta-box .button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headless-preview-meta-box .button-primary {
+  background: #2271b1;
+  border-color: #2271b1;
+  color: #ffffff;
+}
+
+.headless-preview-meta-box .button-primary:hover {
+  background: #135e96;
+  border-color: #135e96;
+}
+
+.headless-preview-meta-box .button-secondary {
+  background: #f6f7f7;
+  border-color: #c3c4c7;
+  color: #50575e;
+}
+
+.headless-preview-meta-box .button-secondary:hover {
+  background: #f0f0f1;
+  border-color: #8c8f94;
+  color: #1d2327;
+}
+
+.headless-preview-meta-box .button .dashicons {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .headless-preview-split {
+    flex-direction: column;
+  }
+
+  .headless-preview-editor,
+  .headless-preview-preview {
+    width: 100%;
+    height: 50%;
+  }
+
+  .headless-preview-resizer {
+    width: 100%;
+    height: 4px;
+    cursor: row-resize;
+  }
+
+  .headless-preview-resizer::after {
+    width: 20px;
+    height: 2px;
+  }
+}

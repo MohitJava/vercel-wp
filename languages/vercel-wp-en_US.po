@@ -1,0 +1,710 @@
+# Vercel WP - English Translation
+# Copyright (C) 2024 Dorey Benjamin
+# This file is distributed under the GPL v3 or later license.
+
+msgid ""
+msgstr ""
+"Project-Id-Version: Vercel WP 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/doreybenjamin/vercel-wp/issues\n"
+"POT-Creation-Date: 2024-01-01 12:00+0000\n"
+"PO-Revision-Date: 2024-01-01 12:00+0000\n"
+"Last-Translator: Dorey Benjamin <benjamin@biomx.dev>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Deploy Module Translations
+msgid "Deploy to Vercel"
+msgstr "Deploy to Vercel"
+
+msgid "Deploy"
+msgstr "Deploy"
+
+msgid "Vercel WP"
+msgstr "Vercel WP"
+
+msgid "Settings"
+msgstr "Settings"
+
+msgid "Webhook Settings"
+msgstr "Webhook settings"
+
+msgid "The build and deploy status will not work without these fields entered correctly"
+msgstr "The build and deploy status will not work without these fields entered correctly"
+
+msgid "Webhook Build URL"
+msgstr "Webhook build URL"
+
+msgid "Vercel Project ID"
+msgstr "Vercel project ID"
+
+msgid "Vercel API Key"
+msgstr "Vercel API key"
+
+msgid "Build Website"
+msgstr "Build website"
+
+msgid "Build Site"
+msgstr "Build site"
+
+msgid "Do not abuse the Build Site button"
+msgstr "Do not abuse the build site button"
+
+msgid "Deploy Status"
+msgstr "Deploy status"
+
+msgid "Check Deploy Status"
+msgstr "Check deploy status"
+
+msgid "Previous Builds"
+msgstr "Previous builds"
+
+msgid "Load Previous Deploys"
+msgstr "Load previous deploys"
+
+msgid "Do not change this if you dont know what you are doing."
+msgstr "Do not change this if you dont know what you are doing."
+
+msgid "Creating a Deploy Hook"
+msgstr "Creating a deploy hook"
+
+msgid "Your settings have been updated!"
+msgstr "Your settings have been updated!"
+
+msgid "Deploy Site"
+msgstr "Deploy site"
+
+msgid "Vercel deploy status"
+msgstr "Vercel deploy status"
+
+msgid "Configuration Guide"
+msgstr "Configuration guide"
+
+msgid "Follow these steps to get the required information from Vercel:"
+msgstr "Follow these steps to get the required information from Vercel:"
+
+msgid "1. Webhook Build URL"
+msgstr "1. Webhook build URL"
+
+msgid "Go to your Vercel project dashboard"
+msgstr "Go to your Vercel project dashboard"
+
+msgid "Navigate to Settings → Git"
+msgstr "Navigate to settings → Git"
+
+msgid "Scroll down to \"Deploy Hooks\" section"
+msgstr "Scroll down to \"Deploy Hooks\" section"
+
+msgid "Click \"Create Hook\" and give it a name"
+msgstr "Click \"Create Hook\" and give it a name"
+
+msgid "Copy the generated webhook URL"
+msgstr "Copy the generated webhook URL"
+
+msgid "→ Detailed Deploy Hook Documentation"
+msgstr "→ Detailed deploy hook documentation"
+
+msgid "2. Vercel Project ID"
+msgstr "2. Vercel project ID"
+
+msgid "Navigate to Settings → General"
+msgstr "Navigate to settings → General"
+
+msgid "Find \"Project ID\" in the Project Information section"
+msgstr "Find \"Project ID\" in the project information section"
+
+msgid "Copy the Project ID"
+msgstr "Copy the project ID"
+
+msgid "3. Vercel API Key"
+msgstr "3. Vercel API key"
+
+msgid "Go to Vercel Account Settings"
+msgstr "Go to Vercel account settings"
+
+msgid "Navigate to Tokens section"
+msgstr "Navigate to tokens section"
+
+msgid "Click \"Create Token\" and give it a name"
+msgstr "Click \"Create Token\" and give it a name"
+
+msgid "Set expiration date (recommended: 1 year)"
+msgstr "Set expiration date (recommended: 1 year)"
+
+msgid "Copy the generated token"
+msgstr "Copy the generated token"
+
+msgid "→ API Key Documentation"
+msgstr "→ API key documentation"
+
+msgid "Configure your Vercel preview URL"
+msgstr "Configure your Vercel preview URL"
+
+msgid "Optionally, add your production URL for mapping"
+msgstr "Optionally, add your production URL for mapping"
+
+msgid "The preview button will appear in the admin bar and editor"
+msgstr "The preview button will appear in the admin bar and editor"
+
+msgid "Click to see your changes in real time"
+msgstr "Click to see your changes in real time"
+
+msgid "Important:"
+msgstr "Important:"
+
+msgid "URL Replacement"
+msgstr "URL replacement"
+
+msgid "If you have changed your production URL, use this tool to replace all old URLs in your content."
+msgstr "If you have changed your production URL, use this tool to replace all old URLs in your content."
+
+msgid "Protection:"
+msgstr "Protection:"
+
+msgid "This plugin's data is automatically excluded from replacement to prevent any corruption."
+msgstr "This plugin's data is automatically excluded from replacement to prevent any corruption."
+
+msgid "Old URL:"
+msgstr "Old URL:"
+
+msgid "New URL:"
+msgstr "New URL:"
+
+msgid "Analyze Content"
+msgstr "Analyze content"
+
+msgid "Confirm Replacement"
+msgstr "Confirm replacement"
+
+msgid "Cancel"
+msgstr "Cancel"
+
+msgid "Please enter both URLs"
+msgstr "Please enter both URLs"
+
+msgid "URLs must be different"
+msgstr "URLs must be different"
+
+msgid "Analyzing..."
+msgstr "Analyzing..."
+
+msgid "Analyzing content..."
+msgstr "Analyzing content..."
+
+msgid "Analysis completed"
+msgstr "Analysis completed"
+
+msgid "Occurrences found:"
+msgstr "Occurrences found:"
+
+msgid "Posts/Pages"
+msgstr "Posts/Pages"
+
+msgid "Metadata"
+msgstr "Metadata"
+
+msgid "Comments"
+msgstr "Comments"
+
+msgid "Options"
+msgstr "Options"
+
+msgid "Widgets"
+msgstr "Widgets"
+
+msgid "Customizer"
+msgstr "Customizer"
+
+msgid "Ready for replacement"
+msgstr "Ready for replacement"
+
+msgid "Total elements to modify:"
+msgstr "Total elements to modify:"
+
+msgid "No occurrences found"
+msgstr "No occurrences found"
+
+msgid "No content needs to be updated."
+msgstr "No content needs to be updated."
+
+msgid "Analysis failed"
+msgstr "Analysis failed"
+
+msgid "Error during analysis"
+msgstr "Error during analysis"
+
+msgid "REPLACEMENT SUMMARY"
+msgstr "REPLACEMENT SUMMARY"
+
+msgid "Operation details"
+msgstr "Operation details"
+
+msgid "Elements that will be modified:"
+msgstr "Elements that will be modified:"
+
+msgid "Theme"
+msgstr "Theme"
+
+msgid "Examples of modified content:"
+msgstr "Examples of modified content:"
+
+msgid "Modification of"
+msgstr "Modification of"
+
+msgid "elements"
+msgstr "elements"
+
+msgid "Make sure you have a backup before continuing."
+msgstr "Make sure you have a backup before continuing."
+
+msgid "Available actions:"
+msgstr "Available actions:"
+
+msgid "CONFIRM"
+msgstr "CONFIRM"
+
+msgid "ABORT"
+msgstr "ABORT"
+
+msgid "Replacement in progress..."
+msgstr "Replacement in progress..."
+
+msgid "Initializing..."
+msgstr "Initializing..."
+
+msgid "Replacing URLs..."
+msgstr "Replacing URLs..."
+
+msgid "Fixing ACF fields..."
+msgstr "Fixing ACF fields..."
+
+msgid "Clearing caches..."
+msgstr "Clearing caches..."
+
+msgid "Finalizing..."
+msgstr "Finalizing..."
+
+msgid "Replacement completed successfully!"
+msgstr "Replacement completed successfully!"
+
+msgid "Result:"
+msgstr "Result:"
+
+msgid "elements modified successfully"
+msgstr "elements modified successfully"
+
+msgid "Modification details:"
+msgstr "Modification details:"
+
+msgid "Replacement failed"
+msgstr "Replacement failed"
+
+msgid "Error during replacement"
+msgstr "Error during replacement"
+
+msgid "ACF Debug - Diagnostic Information"
+msgstr "ACF debug - diagnostic information"
+
+msgid "Debug information to diagnose ACF field replacement issues."
+msgstr "Debug information to diagnose ACF field replacement issues."
+
+msgid "Show ACF Debug"
+msgstr "Show ACF debug"
+
+msgid "Clear Debug"
+msgstr "Clear debug"
+
+msgid "Inspect ACF Field"
+msgstr "Inspect ACF field"
+
+msgid "If your project is in a Team, make sure to set your team as the Default Team in Account Settings."
+msgstr "If your project is in a Team, make sure to set your team as the Default Team in Account Settings."
+
+msgid "Vercel Deploy"
+msgstr "Vercel Deploy"
+
+msgid "Deploy your WordPress site to Vercel with one click"
+msgstr "Deploy your WordPress site to Vercel with one click"
+
+msgid "Configuration Required"
+msgstr "Configuration required"
+
+msgid "Please configure your Vercel settings before deploying."
+msgstr "Please configure your Vercel settings before deploying."
+
+msgid "Go to Settings"
+msgstr "Go to Settings"
+
+msgid "Deploy Now"
+msgstr "Deploy Now"
+
+msgid "Trigger a new deployment"
+msgstr "Trigger a new deployment"
+
+msgid "This will trigger a new build and deployment of your site."
+msgstr "This will trigger a new build and deployment of your site."
+
+msgid "Deployment Status"
+msgstr "Deployment status"
+
+msgid "Check current deployment status"
+msgstr "Check current deployment status"
+
+msgid "Check Status"
+msgstr "Check Status"
+
+msgid "No active deployment found"
+msgstr "No active deployment found"
+
+msgid "Deployment History"
+msgstr "Deployment history"
+
+msgid "View previous deployments"
+msgstr "View previous deployments"
+
+msgid "Load History"
+msgstr "Load History"
+
+msgid "Quick Actions"
+msgstr "Quick actions"
+
+msgid "Vercel Dashboard"
+msgstr "Vercel dashboard"
+
+msgid "Documentation"
+msgstr "Documentation"
+
+msgid "Vercel Status"
+msgstr "Vercel Status"
+
+msgid "Checking status..."
+msgstr "Checking status..."
+
+msgid "Refresh"
+msgstr "Refresh"
+
+msgid "System Info"
+msgstr "System info"
+
+msgid "Plugin Version:"
+msgstr "Plugin Version:"
+
+msgid "WordPress:"
+msgstr "WordPress:"
+
+msgid "PHP:"
+msgstr "PHP:"
+
+msgid "Configuration:"
+msgstr "Configuration:"
+
+msgid "Complete"
+msgstr "Complete"
+
+msgid "Incomplete"
+msgstr "Incomplete"
+
+msgid "Recent Activity"
+msgstr "Recent activity"
+
+msgid "No recent activity"
+msgstr "No recent activity"
+
+msgid "Branch:"
+msgstr "Branch:"
+
+msgid "Created:"
+msgstr "Created:"
+
+msgid "Duration:"
+msgstr "Duration:"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Deployed by:"
+msgstr "Deployed by:"
+
+msgid "Commit:"
+msgstr "Commit:"
+
+msgid "Environment:"
+msgstr "Environment:"
+
+msgid "Please configure the following required settings before deploying:"
+msgstr "Please configure the following required settings before deploying:"
+
+msgid "Please configure all required settings before deploying. Missing: %s"
+msgstr "Please configure all required settings before deploying. Missing: %s"
+
+msgid "Webhook URL not configured. Please set up your webhook URL in the settings."
+msgstr "Webhook URL not configured. Please set up your webhook URL in the settings."
+
+msgid "Deployment Not Available"
+msgstr "Deployment not available"
+
+msgid "Webhook URL is required to deploy your site. Please configure it in the settings."
+msgstr "Webhook URL is required to deploy your site. Please configure it in the settings."
+
+msgid "Configure Webhook URL"
+msgstr "Configure webhook URL"
+
+msgid "Additional Configuration Available"
+msgstr "Additional configuration available"
+
+msgid "You can deploy now, but for full functionality, configure these additional settings:"
+msgstr "You can deploy now, but for full functionality, configure these additional settings:"
+
+msgid "Configure Additional Settings"
+msgstr "Configure additional settings"
+
+msgid "Checking Vercel status..."
+msgstr "Checking Vercel status..."
+
+msgid "Vercel"
+msgstr "Vercel"
+
+msgid "Deploying…"
+msgstr "Deploying…"
+
+msgid "Deploy building..."
+msgstr "Deploy building..."
+
+msgid "Deployment completed successfully!"
+msgstr "Deployment completed successfully!"
+
+msgid "Deployment failed"
+msgstr "Deployment failed"
+
+msgid "Load Last 3 Deployments"
+msgstr "Load Last 3 Deployments"
+
+msgid "Load Full History"
+msgstr "Load full history"
+
+msgid "Recent deployments"
+msgstr "Recent deployments"
+
+msgid "Vercel Status - Click to view"
+msgstr "Vercel Status - Click to view"
+
+msgid "Deploy Settings"
+msgstr "Deploy settings"
+
+msgid "Configure your Vercel deployment settings."
+msgstr "Configure your Vercel deployment settings."
+
+msgid "Quick Links"
+msgstr "Quick links"
+
+msgid "📊 Vercel Dashboard"
+msgstr "📊 Vercel dashboard"
+
+msgid "📚 Vercel Docs"
+msgstr "📚 Vercel docs"
+
+msgid "📖 Deploy Hook Docs"
+msgstr "📖 Deploy hook docs"
+
+msgid "📖 API Key Docs"
+msgstr "📖 API key docs"
+
+msgid "💡 Important:"
+msgstr "💡 Important:"
+
+# Preview Module Translations
+msgid "Headless Preview"
+msgstr "Headless Preview"
+
+msgid "Loading..."
+msgstr "Loading..."
+
+msgid "Error loading"
+msgstr "Error loading"
+
+msgid "Clear cache"
+msgstr "Clear cache"
+
+msgid "Open preview"
+msgstr "Open preview"
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "New tab"
+msgstr "New tab"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Desktop"
+msgstr "Desktop"
+
+msgid "Tablet"
+msgstr "Tablet"
+
+msgid "Mobile"
+msgstr "Mobile"
+
+msgid "Connected"
+msgstr "Connected"
+
+msgid "Preview blocked"
+msgstr "Preview blocked"
+
+msgid "Your browser blocks the display. Click below to open in a new tab."
+msgstr "Your browser blocks the display. Click below to open in a new tab."
+
+msgid "Open in new tab"
+msgstr "Open in new tab"
+
+msgid "Unable to load preview"
+msgstr "Unable to load preview"
+
+msgid "Preview cannot be loaded. Check your configuration."
+msgstr "Preview cannot be loaded. Check your configuration."
+
+msgid "Retry"
+msgstr "Retry"
+
+msgid "Security error"
+msgstr "Security error"
+
+msgid "Settings saved"
+msgstr "Settings saved"
+
+msgid "Cache cleared"
+msgstr "Cache cleared"
+
+msgid "Preview URL missing"
+msgstr "Preview URL missing"
+
+msgid "Too many redirects detected. "
+msgstr "Too many redirects detected. "
+
+msgid "Connection timeout. URL takes too long to respond."
+msgstr "Connection timeout. URL takes too long to respond."
+
+msgid "SSL error. Check that the URL uses HTTPS correctly."
+msgstr "SSL error. Check that the URL uses HTTPS correctly."
+
+msgid "Connection error: %s"
+msgstr "Connection error: %s"
+
+msgid "Connection successful! (HTTP Code: %d)"
+msgstr "Connection successful! (HTTP Code: %d)"
+
+msgid " - Redirected to: %s"
+msgstr " - Redirected to: %s"
+
+msgid "HTTP error %d. Check that the URL is accessible."
+msgstr "HTTP error %d. Check that the URL is accessible."
+
+msgid "Redirect chain detected: %s"
+msgstr "Redirect chain detected: %s"
+
+msgid "Check that the URL is correct and accessible."
+msgstr "Check that the URL is correct and accessible."
+
+msgid "URL not configured"
+msgstr "URL not configured"
+
+msgid "Connection active"
+msgstr "Connection active"
+
+msgid "How to use"
+msgstr "How to use"
+
+msgid "Required Vercel Configuration"
+msgstr "Required Vercel configuration"
+
+msgid "Statistics"
+msgstr "Statistics"
+
+msgid "Last refresh:"
+msgstr "Last refresh:"
+
+msgid "Never"
+msgstr "Never"
+
+msgid "Last production URL:"
+msgstr "Last production URL:"
+
+msgid "Testing..."
+msgstr "Testing..."
+
+msgid "Connection successful!"
+msgstr "Connection successful!"
+
+msgid "URL not accessible"
+msgstr "URL not accessible"
+
+msgid "Error during connection test."
+msgstr "Error during connection test."
+
+msgid "Running advanced diagnostics..."
+msgstr "Running advanced diagnostics..."
+
+msgid "Diagnostics completed"
+msgstr "Diagnostics completed"
+
+msgid "Error during diagnostics"
+msgstr "Error during diagnostics"
+
+msgid "Unknown error"
+msgstr "Unknown error"
+
+
+msgid "Cancellation in progress..."
+msgstr "Cancellation in progress..."
+
+msgid "Cancellation completed successfully!"
+msgstr "Cancellation completed successfully!"
+
+msgid "All changes have been reversed."
+msgstr "All changes have been reversed."
+
+msgid "ERROR:"
+msgstr "ERROR:"
+
+msgid "Error during cancellation"
+msgstr "Error during cancellation"
+
+msgid "Total items modified:"
+msgstr "Total items modified:"
+
+msgid "Items processed:"
+msgstr "Items processed:"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "No elements found in this category"
+msgstr "No elements found in this category"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Field"
+msgstr "Field"
+
+msgid "URL found"
+msgstr "URL found"
+
+msgid "Comment"
+msgstr "Comment"
+
+msgid "Author"
+msgstr "Author"
+
+msgid "Value"
+msgstr "Value"
+
+msgid "Widget"
+msgstr "Widget"
+
+msgid "Section"
+msgstr "Section"
